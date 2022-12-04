@@ -1,0 +1,303 @@
+/* Styles fonts ------------------------- */
+@font-face {
+    font-family: "TTLakes Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TTLakes"),  
+         url("fonts/TTLakes-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "TTLakes Bold";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TTLakes"),
+         url("fonts/TTLakes-Bold.woff") format("woff");
+}
+@font-face {
+    font-family: "TTLakes Meduim";
+    font-style: normal;
+    font-weight: 700;
+    src: local("TTLakes"),
+         url("fonts/TTLakes-Medium.woff") format("woff");
+}
+/* All -------------------------*/
+*{
+ padding: 0;
+ margin: 0;
+}
+body {
+    font-family: "TTLakes Regular";
+    background-color: #F8F8F8;   
+}
+/* Header-menu -------------------------  */
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 88px;
+    background-color: #FFFFFF;
+    padding: 0 0;
+    border-bottom: 1px solid #D9FFF5;
+}
+.header-menu{
+    display:flex;
+    justify-content: space-between;
+}
+.burger-menu {
+    display: flex;
+    padding-left: 0.5rem;
+  }
+.box-menu{
+    display: flex;
+    align-items: center;
+}
+.box-menu div:nth-child(1){
+    display: none;
+}
+.support-menu{
+    display: flex;
+    padding-bottom: 1rem;
+}
+.settings-menu{
+    display: flex; 
+    align-items: baseline; 
+    margin-right: 0.5rem;
+    padding-bottom: 1rem;
+    
+}
+.settings-menu::before{
+    content: '';
+    width: 0.1rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+    background-color:#EAEAEA; 
+}
+ /* Button-image -------------------------  */
+.button-icon{
+    width: 40px;
+    height: 40px;
+    margin: 1.5rem 0.5rem;
+    border: none;
+    border-radius: 50%;      
+}
+/* logo -------------------------*/
+.logo-icon{
+    margin: 1.2rem 0.5rem;
+    
+}
+Devider -------------------------
+.vertical-divider {
+    margin-left: 0.1rem;
+    width: 0.1rem;
+    height: 2rem;
+    background-color:#EAEAEA; 
+}
+/* Title ------------------------- */
+.title {
+    font-family: "TTLakes Bold";
+    font-size: 28px;
+}
+/* Main-header -------------------- */
+.main-header {
+   display:flex;
+   align-items: center;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+.main-header__title{
+    display:flex;
+    align-items: center;
+    padding: 0 0;
+    width: 100%;
+}
+.main-header__title .title{
+    width: 100%;
+    padding: 1rem 0;
+}
+.main-header__title .title::before {
+    content: '';
+    width: 0.2rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    background-color:#41F6D7;
+    border-radius: 0 1rem 1rem 0; 
+}
+.main-header__button{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.button-label{
+    display: block;
+    font-family:"TTLakes Meduim";
+    font-size: 16px;
+    letter-spacing: 0.01rem;
+    white-space: nowrap;
+}
+.main-header div:nth-child(2){
+    display: none;
+}
+/* Main-nav -------------------- */
+.main-nav{
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 1rem;
+}
+.main-nav__item{
+    display: inline-block;
+    font-size: 1rem;
+    color: #7E7E82;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+.main-nav__item:first-child {
+    border: 0.1rem solid #41f6d7;
+    border-radius: 0.4rem;
+    background-color: #fff;
+}
+.main-nav__item:focus {
+    border: 0.1rem solid #41f6d7;
+    border-radius: 0.4rem;
+    background-color: #fff;
+}
+/* Content-text --------------------*/
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content-text{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin:0;
+    padding: 0;
+}
+.content-text__p{
+    font-size: 14px;
+    padding: 1.5rem 1rem 1rem 1rem;
+    letter-spacing: 0.01rem;
+}
+.content-text__p--disable:nth-child(2){
+    display: none;
+}
+.button-slider{
+    display: inline-block;
+    vertical-align: middle;
+    font-family:"TTLakes Meduim";
+    font-size: 16px;
+    border:none;
+    padding: 0 0 1rem 1rem;
+    margin: 0;
+    letter-spacing: 0.01rem;
+    background-color:transparent;
+}
+.image-slider{
+    display: inline-block;
+    vertical-align: middle;
+}
+.content__img{
+    width: 100%;
+    height:auto;
+}
+/* Media -------------------- */
+@media (min-width: 768px){
+    .header-menu{
+        justify-content: space-between;
+    }
+    .header-menu div:nth-child(1){
+        display: block;
+    }
+    .logo-icon{
+        margin: 1.2rem 1.5rem;
+    }
+    .burger-menu button{
+        display: flex; 
+        align-items: baseline;
+    }
+    .burger-menu button::after {
+        content: '';
+        width: 0rem;
+        height: 2.5rem;
+        margin-left: 1rem;
+        margin-right: 0.5rem;
+        display: flex;
+        border: 1px solid #EAEAEA;
+      }
+    .settings-menu::before{
+        content: '';
+        width: 0.1rem;
+        height: 2.5rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        background-color:#EAEAEA; 
+    }
+    .content{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .content-text{
+        width: 50%;
+        padding-left:1rem;
+
+    }
+    .content-text__p{
+        height: auto;
+        font-size: 14px;
+        padding: 1.5rem 1rem 0.5rem 1rem;
+        margin: 0 2rem 0 0;
+        letter-spacing: 0.01rem;
+    }
+    .content-text__p--disable:nth-child(2){
+        display: block;
+        font-size: 14px;
+        letter-spacing: 0.01rem;
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    .content-text__p--disable--more:nth-child(1){
+        display:none;
+    }    
+    .content__img{
+        width: 45%;
+        border-radius: 0.5rem;
+        margin: 1.5rem 1rem 1rem 1rem ;
+    }
+}
+@media (min-width: 1120px){
+    .header{
+        display:none;
+    }
+    .main-header{
+        padding-top:1rem;
+        margin: 0.01rem;
+    }
+    .main-header div:nth-child(2){
+        display: flex;
+    }
+    .main-header__button{
+        margin-right: 2rem;
+    }
+    .main-header__button div:nth-child(3){
+        padding-left: 2rem;
+    }
+    .main-nav{
+        white-space: normal;
+    }
+    .main-nav__item{
+        padding: 1rem 1.25rem;
+    }
+    .content-text__p{
+        padding: 0rem 1rem 1rem 1rem;
+        width: 95%;
+    }
+    .content-text__p--disable--more:nth-child(1){
+        display: inline;
+    }   
+    .content__img{
+        width: 50%;
+        height:auto;
+        margin-top: 0rem;
+    }
+}
